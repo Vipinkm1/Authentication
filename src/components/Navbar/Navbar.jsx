@@ -1,9 +1,18 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { CgProfile } from "react-icons/cg";
 import { GoHome } from "react-icons/go";
 import { CiSettings } from "react-icons/ci";
 
 const Navbar = () => {
+
+  const [profilename, setProfileName] = useState('')
+  
+  useEffect(() => {
+    const storedUserData = JSON.parse(localStorage.getItem('signForm'))
+    if(storedUserData && storedUserData.username){
+      setProfileName(storedUserData.username);
+    }
+  },[])
   return (
     <div className='navbar-container'>
       <div className='navbar-item'>
@@ -21,7 +30,7 @@ const Navbar = () => {
           </div>
           <div className='nav-list'>
             <CgProfile className='icon-size' />
-            <p>Profile</p>
+            <p>{profilename ? profilename : 'Profile'}</p>
           </div>
         </div>
       </div>

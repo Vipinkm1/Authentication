@@ -17,7 +17,10 @@ const Login = () => {
   const handleLoginSubmit = (e) => {
     e.preventDefault()
     setLoginForm(loginForm)
-    // get the data from the local Storage 
+    // get the data from the local Storage  and show the main component
+
+  
+  
     const storedUserData = JSON.parse(localStorage.getItem('signForm'))
     if (storedUserData.email === loginForm.email && storedUserData.password === loginForm.password) {
       alert('Login Successfully')
@@ -28,8 +31,8 @@ const Login = () => {
     }
     console.log(loginForm)
   }
-  
-  return (
+
+   return (
     <div className='signup-container'>
       <h1 className='p-center'>Login</h1>
       <div className='signup-border'>
