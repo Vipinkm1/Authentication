@@ -82,6 +82,9 @@ input{
   background-color: rgb(250, 250, 251);
   cursor: pointer;
 }
+.error{
+  color: red;
+}
 .btn-1:hover{
   background-color: rgb(2, 6, 35);
   color: #fff;
@@ -92,3 +95,6 @@ input{
   color: blue;
   cursor: pointer;
 }
+
+
+/*  media query for the all the device */

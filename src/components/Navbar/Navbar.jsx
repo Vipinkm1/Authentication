@@ -6,7 +6,6 @@ import { CiSettings } from "react-icons/ci";
 const Navbar = () => {
 
   const [profilename, setProfileName] = useState('')
-  
   useEffect(() => {
     const storedUserData = JSON.parse(localStorage.getItem('signForm'))
     if(storedUserData && storedUserData.username){
